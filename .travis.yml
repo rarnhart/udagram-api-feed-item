@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t udagram-api-feed-item-service .
-  - docker tag simple-node dealio/udagram-api-feed-item-service:latest
+  - docker tag udagram-api-feed-item-service dealio/udagram-api-feed-item-service:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
